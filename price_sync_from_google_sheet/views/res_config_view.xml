@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="res_config_settings_view_form_base_setup" model="ir.ui.view">
+			<field name="name">res.config.settings.view.form.inherit</field>
+			<field name="model">res.config.settings</field>
+			<field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@data-key='general_settings']" position="inside">
+					<div id="invite_users">
+						<h2>Google Sheet Configurations</h2>
+						<div class="row mt16 o_settings_container" name="users_setting_container">
+							<div class="col-12 col-lg-6 o_setting_box" id="active_user_setting">
+								<div class="o_setting_right_pane">
+									<span class="fa fa-lg" aria-label="Number of active users"/>
+									<span>Sheet Key: </span>
+									<field name="sheet_key" class="w-auto pl-3 font-weight-bold"/>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</xpath>
+			</field>
+		</record>
+    
+    </data>
+    
+
+</odoo>
